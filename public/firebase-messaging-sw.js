@@ -40,7 +40,7 @@ messaging.setBackgroundMessageHandler(function (payload) {
     let title = 'Recipe PWA',
         options = {
             body: "New Recipe Alert",
-            icon: "https://raw.githubusercontent.com/idoqo/laravel-vue-recipe-pwa/master/public/recipe-book.png"
+            icon: "/recipe-book.png"
         };
     return self.registration.showNotification(
         title,

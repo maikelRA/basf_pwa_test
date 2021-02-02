@@ -103,15 +103,16 @@
 
                     messaging.getToken()
                         .then((token) => {
-                            console.log(token);
                             this.registerToken(token)
                         })
                         .catch((err) => {
                             console.log('An error occurred while retrieving token. ', err);
                         });
                     messaging.onMessage(function (payload) {
-                        console.log("Message received", payload);
-                        let n = new Notification("New Recipe alert!")
+                        const options = {
+                            icon: "https://github.com/maikelRA/basf_pwa_test/blob/main/public/recipe-book.png"
+                        };
+                        let n = new Notification("New Recipe Alert!", options)
                     });
                 }
             }

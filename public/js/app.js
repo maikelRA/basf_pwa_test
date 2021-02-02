@@ -9498,15 +9498,15 @@ __webpack_require__.r(__webpack_exports__);
         firebase_app__WEBPACK_IMPORTED_MODULE_0__.default.initializeApp(config);
         var messaging = firebase_app__WEBPACK_IMPORTED_MODULE_0__.default.messaging();
         messaging.getToken().then(function (token) {
-          console.log(token);
-
           _this2.registerToken(token);
         })["catch"](function (err) {
           console.log('An error occurred while retrieving token. ', err);
         });
         messaging.onMessage(function (payload) {
-          console.log("Message received", payload);
-          var n = new Notification("New Recipe alert!");
+          var options = {
+            icon: "https://github.com/maikelRA/basf_pwa_test/blob/main/public/recipe-book.png"
+          };
+          var n = new Notification("New Recipe Alert!", options);
         });
       }
     }
