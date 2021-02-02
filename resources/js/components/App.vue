@@ -109,7 +109,6 @@
                         .catch((err) => {
                             console.log('An error occurred while retrieving token. ', err);
                         });
-
                     messaging.onMessage(function (payload) {
                         console.log("Message received", payload);
                         let n = new Notification("New Recipe alert!")
